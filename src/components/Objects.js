@@ -1,16 +1,26 @@
 // import { Canvas } from "@react-three/fiber"
 
+import { useRef } from "react"
+
 export default function Objects(){
-    
+
+    const directionalLight = useRef()
+
     return (
         <>
-            <mesh position-x={3} scale={2}>
+            <directionalLight 
+                ref={ directionalLight } 
+                position={[1, 1, 0]} 
+                color="#ffffff" 
+                intensity={ 1 } 
+            />
+            <mesh position-x={1} scale={1}>
                 <boxGeometry />
-                <meshBasicMaterial color="red"/>
+                <meshToonMaterial/>
             </mesh>
             <mesh>
                 <sphereGeometry />
-                <meshBasicMaterial color="orange"/>
+                <meshBasicMaterial />
             </mesh>
         </>
     )
