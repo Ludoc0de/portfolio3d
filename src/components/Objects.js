@@ -1,7 +1,8 @@
 // import { Canvas } from "@react-three/fiber"
 import texture from '../textures/3.jpg'
-import { useTexture } from "@react-three/drei"
+import { useTexture, useScroll } from "@react-three/drei"
 import { useRef } from "react"
+import useRefs from 'react-use-refs'
 import * as THREE from 'three'
 import { NearestFilter } from 'three'
 import { useFrame } from '@react-three/fiber'
@@ -9,18 +10,16 @@ import { useFrame } from '@react-three/fiber'
 export default function Objects(){
 
     const directionalLight = useRef()
-    const props = useTexture({ 
+    const propsTexture = useTexture({ 
         map: texture
     })
      
-    const gradientTexture = props.map
+    const gradientTexture = propsTexture.map
     gradientTexture.magFilter = THREE.NearestFilter
     
     const objectsDistance = 4
 
-    const torusRef=useRef()
-    const coneRef=useRef()
-    const toruskRef=useRef()
+    const [torusRef, coneRef, toruskRef] = useRefs()
 
     const objectsRef = [torusRef, coneRef, toruskRef]
 
@@ -31,20 +30,26 @@ export default function Objects(){
         }
     })
 
-    let scrollY = window.scrollY
+        function Demo(props){
+            const boxRef = useRef()
+            const data = useScroll()
+            useFrame((state, delta) => {
+                data.offset = 0
+                data.delta= 1
 
-    useFrame((mouse, camera) =>{
-        // Animate camera
-        camera.position.y = scrollY
-    })
+                const a = data.range(0, 1 / 3)
+                const b = data.range(1 / 3, 2 / 3)
+                // const c = data.range(1, 3 / 3)
+            })
 
-    window.addEventListener('scroll', () =>
-    {
-        scrollY = window.scrollY
-
-    })
-
-
+            console.log(props)
+            return (
+                <mesh ref={boxRef} {...props}>
+                    <boxGeometry/>
+                    <meshToonMaterial />
+                </mesh>
+            )
+        }
 
     return (
         <>
@@ -54,8 +59,8 @@ export default function Objects(){
                 color="#ffffff" 
                 intensity={ 1 } 
             />
-
-            <mesh ref={torusRef} rotation-y={ Math.PI * 0.25 } position-y={[- objectsDistance * 0]}>
+            <Demo />
+            <mesh  ref={torusRef} rotation-y={ Math.PI * 0.25 } position-y={[- objectsDistance * 0]}>
                 <torusGeometry args={[1, 0.4, 16, 60]} />
                 <meshToonMaterial gradientMap={gradientTexture}  />
             </mesh>

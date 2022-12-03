@@ -1,4 +1,4 @@
-import { Html } from "@react-three/drei"
+import { Html, Scroll } from "@react-three/drei"
 
 export default function Main(){
      return (

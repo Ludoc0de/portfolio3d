@@ -21,11 +21,11 @@ Canvas {
     /* outline: none; */
 }
 
-.main {
+/* .main {
     position:absolute;
     top:0;
     width: 100%;
-}
+} */
 
 .section {
     display: flex;
