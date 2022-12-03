@@ -17,7 +17,7 @@ export default function Objects(){
     gradientTexture.magFilter = THREE.NearestFilter
     
     const objectsDistance = 4
-    
+
     const torusRef=useRef()
     const coneRef=useRef()
     const toruskRef=useRef()
@@ -30,6 +30,20 @@ export default function Objects(){
             object.current.rotation.x += delta*0.15
         }
     })
+
+    let scrollY = window.scrollY
+
+    useFrame((mouse, camera) =>{
+        // Animate camera
+        camera.position.y = scrollY
+    })
+
+    window.addEventListener('scroll', () =>
+    {
+        scrollY = window.scrollY
+
+    })
+
 
 
     return (
