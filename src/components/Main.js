@@ -2,7 +2,7 @@ import { Html } from "@react-three/drei"
 
 export default function Main(){
      return (
-        <>
+        <div className="main">
             <section className="section">
                 <h1>Ludo code !</h1>
             </section>
@@ -12,6 +12,6 @@ export default function Main(){
             <section className="section">
                 <h1>Contact me</h1>
             </section>
-        </>
+        </div>
      )
 }
