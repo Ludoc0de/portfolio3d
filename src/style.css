@@ -21,6 +21,12 @@ Canvas {
     /* outline: none; */
 }
 
+.main {
+    position:absolute;
+    top:0;
+    width: 100%;
+}
+
 .section {
     display: flex;
     align-items: center;
@@ -33,6 +39,6 @@ Canvas {
     padding-right: 10%;
 }
 
-section:nth-child(odd) {
+section:nth-child(even) {
     justify-content: flex-end;
 }
