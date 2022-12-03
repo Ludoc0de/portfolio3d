@@ -15,6 +15,8 @@ export default function Objects(){
     const gradientTexture = props.map
     gradientTexture.magFilter = THREE.NearestFilter
     
+    const objectsDistance = 4
+
     return (
         <>
             <directionalLight 
@@ -24,20 +26,19 @@ export default function Objects(){
                 intensity={ 1 } 
             />
 
-            <mesh>
+            <mesh position-y={[- objectsDistance * 0]}>
                 <torusGeometry args={[1, 0.4, 16, 60]} />
                 <meshToonMaterial gradientMap={gradientTexture}  />
             </mesh>
             
-            <mesh>
+            <mesh position-y={[- objectsDistance * 1]}>
                 <coneGeometry args={[1, 2, 32]} />
                 <meshToonMaterial gradientMap={gradientTexture} />
             </mesh>
 
-            <mesh>
+            <mesh position-y={[- objectsDistance * 2]}>
                 <torusKnotGeometry args={[0.8, 0.35, 100, 16]}/>
                 <meshToonMaterial gradientMap={gradientTexture}  />
-                {/* <texture attach='map' image={props.map} magFilter={THREE.NearestFilter} /> */}
             </mesh>
 
         </>
