@@ -27,7 +27,7 @@ Canvas {
     width: 100%;
 } */
 
-.section {
+/* .section {
     display: flex;
     align-items: center;
     height: 100vh;
@@ -37,7 +37,7 @@ Canvas {
     font-size: 7vmin;
     padding-left: 10%;
     padding-right: 10%;
-}
+} */
 
 section:nth-child(even) {
     justify-content: flex-end;
