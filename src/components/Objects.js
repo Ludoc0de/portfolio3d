@@ -38,7 +38,7 @@ export default function Objects(){
                 data.delta= 1
 
                 const a = data.range(0, 1 / 3)
-                const b = data.range(1 / 3, 2 / 3)
+                const b = data.range(1 / 3, 1 / 3)
                 // const c = data.range(1, 3 / 3)
             })
 
