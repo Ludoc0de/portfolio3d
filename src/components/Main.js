@@ -6,7 +6,7 @@ export default function Main(){
             <section 
                 style={{
                     position: 'absolute',
-                    top: '40vh',
+                    top: '45vh',
                     // left: '5vw',
                     // transform: 'translateX(-50%)',
                     // color: 'green',
