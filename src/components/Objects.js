@@ -39,17 +39,17 @@ export default function Objects(){
                 color="#ffffff" 
                 intensity={ 1 } 
             />
-            <mesh  ref={torusRef} rotation-y={ Math.PI * 0.25 } position-y={[- objectsDistance * 0]}>
+            <mesh  ref={torusRef} position-x={0.6} rotation-y={ Math.PI * 0.25 } position-y={[- objectsDistance * 0]}>
                 <torusGeometry args={[1, 0.4, 16, 60]} />
                 <meshToonMaterial gradientMap={gradientTexture}  />
             </mesh>
             
-            <mesh ref={coneRef} rotation-y={ Math.PI * 0.25 } position-y={[- objectsDistance * 1.2]}>
+            <mesh ref={coneRef} position-x={-1.5} rotation-y={ Math.PI * 0.25 } position-y={[- objectsDistance * 1.2]}>
                 <coneGeometry args={[1, 2, 32]} />
                 <meshToonMaterial gradientMap={gradientTexture} />
             </mesh>
 
-            <mesh ref={toruskRef}    rotation-y={ Math.PI * 0.25 } position-y={[- objectsDistance * 2.6]}>
+            <mesh ref={toruskRef} position-x={0.6} rotation-y={ Math.PI * 0.25 } position-y={[- objectsDistance * 2.6]}>
                 <torusKnotGeometry args={[0.8, 0.35, 100, 16]}/>
                 <meshToonMaterial gradientMap={gradientTexture}  />
             </mesh>
