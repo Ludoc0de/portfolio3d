@@ -18,16 +18,22 @@ Canvas {
     position: fixed;
     top: 0;
     left: 0;
-    /* outline: none; */
+    outline: none;
 }
 
-/* .main {
-    position:absolute;
+.main {
+    /* position:absolute;
     top:0;
-    width: 100%;
-} */
+    width: 100%; */
+    font-family: 'Cabin', sans-serif;
+    /* font-size: 7vmin; */
+    font-size: 7vmin;
+    line-height: 0.75;
+    width: 10em;
+    text-transform: uppercase;
+}
 
-.section {
+/* .section {
     display: flex;
     align-items: center;
     height: 100vh;
@@ -38,7 +44,7 @@ Canvas {
     font-size: 7vmin;
     padding-left: 10%;
     padding-right: 10%;
-}
+} */
 
 section:nth-child(even) {
     justify-content: flex-end;
