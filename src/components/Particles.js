@@ -5,9 +5,8 @@ export default function Particles(){
     const particlesCount = 200
     const { width, height } = useThree((state) => state.viewport)
     console.log( 
-        (0.5 - Math.random()) * width * 2,
-        0.5 * height + Math.random() ** 0.25 * height * -3,
-        (0.5 - Math.random()) * 25
+        width,
+        height
     )
 
     return(
@@ -32,14 +31,16 @@ export default function Particles(){
 
             {Array.from({ length: particlesCount }).map((_, i) => (
                 <Point
-                key={i}
-                position={[
-                    (0.5 - Math.random()) * width * 2,
-                    0.5 * height + Math.random() ** 0.25 * height * -3,
-                    (0.5 - Math.random()) * 25,
-                ]}
-                color={"red"}
-                
+                    key={i}
+                    position={[
+                        Math.random(),
+                        Math.random(),
+                        Math.random()
+                        // (0.5 - Math.random()) * width * 2,
+                        // 0.5 * height + Math.random() ** 0.25 * height * -3,
+                        // (0.5 - Math.random()) * 25,
+                    ]}
+                    color={"red"}
                 />
             ))}
 
