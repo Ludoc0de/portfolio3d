@@ -1,14 +1,17 @@
 import { Sparkles, Stars, Shadow, ContactShadows, Points, Point, PointMaterial, pointsMaterial } from '@react-three/drei'
 import { useThree } from '@react-three/fiber'
-import { SphereGeometry } from 'three'
+import { SphereGeometry, bufferAttribute, bufferGeometry } from 'three'
 import * as THREE from 'three'
 
 export default function Particles(){
-    const particlesCount = 10 * 4
-    const positions = new Float32Array(particlesCount * 3)
+    const particlesCount = 100
 
-    for(let i = 0; i < particlesCount * 3; i++){
-        positions[i] = (Math.random() - 0.5) * 10
+    const positions = new Float32Array(particlesCount * 3)
+    console.log(positions)
+  
+    for(let i = 0; i < particlesCount*3; i++){
+        positions[i] = Math.random()
+
     }
     console.log(positions)
     // const { width, height } = useThree((state) => state.viewport)
@@ -49,10 +52,16 @@ export default function Particles(){
         //exo
         <points>
             <bufferGeometry>
-                <bufferAttribute/>
+                <bufferAttribute 
+                    attach="attributes-position"
+                    count={particlesCount}
+                    itemSize={3}
+                    array={positions}
+                />
             </bufferGeometry>
           {/* <sphereGeometry args={[1, 32, 32]} /> */}
-          <pointsMaterial size={.02} sizeAttenuation={true} color="red" />
+          {/* <meshBasicMaterial color="red"/> */}
+          <pointsMaterial size={0.02} sizeAttenuation={true} color={"red"} />
         </points>
     )
 }
