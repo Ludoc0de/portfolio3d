@@ -48,7 +48,10 @@ export default function Particles(){
 
         //exo
         <points>
-          <sphereGeometry args={[1, 32, 32]} />
+            <bufferGeometry>
+                <bufferAttribute/>
+            </bufferGeometry>
+          {/* <sphereGeometry args={[1, 32, 32]} /> */}
           <pointsMaterial size={.02} sizeAttenuation={true} color="red" />
         </points>
     )
