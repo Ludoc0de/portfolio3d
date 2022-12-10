@@ -3,9 +3,16 @@ import Objects from "./components/Objects"
 import Particles from "./components/Particles"
 import { Canvas, useFrame } from "@react-three/fiber"
 import { ScrollControls, Scroll } from "@react-three/drei"
+import { useState } from "react"
 import * as THREE from 'three'
 
 function ScrollAnimation(){
+    //
+    // const childData = (data) => data
+    const [demo, setDemo] = useState()
+    
+    //
+    
     useFrame(({mouse, camera}) => {
         camera.position.x = THREE.MathUtils.lerp(camera.position.x, mouse.x * 0.5, 0.03)
         camera.position.y = THREE.MathUtils.lerp(camera.position.y, mouse.y * 0.5, 0.03)
@@ -16,8 +23,8 @@ function ScrollAnimation(){
     return (
         <ScrollControls pages={3}>
             <Scroll>
-                <Objects />
-                <Particles />
+                <Objects test={demo} />
+                <Particles/>
             </Scroll>
             <Scroll html>
                 <Main />
