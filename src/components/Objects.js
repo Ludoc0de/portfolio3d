@@ -22,6 +22,8 @@ export default function Objects(){
     const [torusRef, coneRef, toruskRef] = useRefs()
 
     const objectsRef = [torusRef, coneRef, toruskRef]
+    const [test, setTest] = useState(objectsRef.length)
+    console.log(test)
 
 
     useFrame((state, delta) =>{
