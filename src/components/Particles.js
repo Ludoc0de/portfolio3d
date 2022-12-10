@@ -4,13 +4,18 @@ import { SphereGeometry, bufferAttribute, bufferGeometry } from 'three'
 import * as THREE from 'three'
 
 export default function Particles(){
-    const particlesCount = 100
+    const particlesCount = 1000
 
     const positions = new Float32Array(particlesCount * 3)
     console.log(positions)
+
+    const { width, height } = useThree((state) => state.viewport)
   
-    for(let i = 0; i < particlesCount*3; i++){
-        positions[i] = Math.random()
+    for(let i = 0; i < particlesCount; i++){
+        positions[i*3+0] = (Math.random() - 0.5)* width
+        positions[i*3+1] = 0.5 * height - Math.random()  * height * 3
+        //3 = number of mesh
+        positions[i*3+2] = (Math.random() - 0.5)* width
 
     }
     console.log(positions)
