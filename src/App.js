@@ -7,11 +7,9 @@ import { useState } from "react"
 import * as THREE from 'three'
 
 function ScrollAnimation(){
-    //
-    // const childData = (data) => data
-    const [demo, setDemo] = useState()
-    
-    //
+    //get particle object.length
+    const [childData, setChildData] = useState()
+    console.log(childData)
     
     useFrame(({mouse, camera}) => {
         camera.position.x = THREE.MathUtils.lerp(camera.position.x, mouse.x * 0.5, 0.03)
@@ -23,7 +21,7 @@ function ScrollAnimation(){
     return (
         <ScrollControls pages={3}>
             <Scroll>
-                <Objects test={demo} />
+                <Objects data={childData => setChildData(childData)} />
                 <Particles/>
             </Scroll>
             <Scroll html>

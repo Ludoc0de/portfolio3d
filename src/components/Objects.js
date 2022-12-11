@@ -1,14 +1,14 @@
 // import { Canvas } from "@react-three/fiber"
 import texture from '../textures/3.jpg'
 import { useTexture, useScroll } from "@react-three/drei"
-import { useRef } from "react"
+import { useCallback, useRef, useState } from "react"
 import useRefs from 'react-use-refs'
 import * as THREE from 'three'
 // import { NearestFilter } from 'three'
 import { useFrame } from '@react-three/fiber'
 
-export default function Objects(){
-
+export default function Objects({data}){
+    
     const directionalLight = useRef()
     const propsTexture = useTexture({ 
         map: texture
@@ -18,13 +18,11 @@ export default function Objects(){
     gradientTexture.magFilter = THREE.NearestFilter
     
     const objectsDistance = 6
-
     const [torusRef, coneRef, toruskRef] = useRefs()
-
     const objectsRef = [torusRef, coneRef, toruskRef]
-    const [test, setTest] = useState(objectsRef.length)
-    console.log(test)
-
+    //save in data objectLength
+    const [objectLength, setObjectLength] = useState(objectsRef.length)
+    data(objectLength)
 
     useFrame((state, delta) =>{
         for(const object of objectsRef){
