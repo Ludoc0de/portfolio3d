@@ -9,12 +9,7 @@ import * as THREE from 'three'
 function ScrollAnimation(){
     //get particle object.length
     const [childData, setChildData] = useState()
-    console.log(childData)
 
-    useEffect(()=>{
-        childData && console.log('ok')
-    }, [childData])
-    
     useFrame(({mouse, camera}) => {
         camera.position.x = THREE.MathUtils.lerp(camera.position.x, mouse.x * 0.5, 0.03)
         camera.position.y = THREE.MathUtils.lerp(camera.position.y, mouse.y * 0.5, 0.03)
@@ -26,7 +21,7 @@ function ScrollAnimation(){
         <ScrollControls pages={3}>
             <Scroll>
                 <Objects data={childData => setChildData(childData)} />
-                <Particles test={childData}/>
+                <Particles data={childData}/>
             </Scroll>
             <Scroll html>
                 <Main />
@@ -40,9 +35,7 @@ export default function App(){
     return (
         <>
             <Canvas>
-                <Suspense>
-                    <ScrollAnimation />
-                </Suspense>
+                <ScrollAnimation />
             </Canvas>
         </>
     )
