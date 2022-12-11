@@ -11,30 +11,58 @@ export default function Particles({data}){
 
     const particlesCount = 1000
     const positions = new Float32Array(particlesCount * 3)
+    //
+    const colors = new Float32Array(particlesCount * 3)
+    // console.log(colors[Math.floor(Math.random() * (colors.length - 1))])
+    //color={particleColors[Math.floor(Math.random() * (particleColors.length - 1))]}
+    //
     const { width, height } = useThree((state) => state.viewport)
-  
+    const particleColors = ['green', 'pink', 'orange', 'blue', 'red']
+
     for(let i = 0; i < particlesCount; i++){
         positions[i*3+0] = (Math.random() - 0.5)* width
         //3 = number of mesh from object
         positions[i*3+1] = 0.5 * height - Math.random()  * height * 3
         positions[i*3+2] = (Math.random() - 0.5)* width
+        //
+        colors[i*3]= particleColors[Math.floor(Math.random() * (particleColors.length - 1))]
 
     }
 
     return(
         // <Stars  radius={10} depth={50} count={2000} factor={5} saturation={0} fade speed={2} /> 
         //<Sparkles color={'yellow'} count={1000} scale={1} size={1} speed={0.4} />
-       
+        
         <points>
-            <bufferGeometry>
-                <bufferAttribute 
+             <pointsMaterial 
+                size={0.02} 
+                sizeAttenuation={true} 
+                // color='red'
+                color={colors}
+             
+             />
+             <bufferGeometry>
+                 <bufferAttribute 
                     attach="attributes-position"
                     count={particlesCount}
                     itemSize={3}
                     array={positions}
                 />
             </bufferGeometry>
-            <pointsMaterial size={0.02} sizeAttenuation={true} color={"red"} />
         </points>
+
+
+        //work one
+        // <points>
+        //     <pointsMaterial size={0.02} sizeAttenuation={true} color={'red'}/>
+        //     <bufferGeometry>
+        //         <bufferAttribute 
+        //             attach="attributes-position"
+        //             count={particlesCount}
+        //             itemSize={3}
+        //             array={positions}
+        //         />
+        //     </bufferGeometry>
+        // </points>
     )
 }
