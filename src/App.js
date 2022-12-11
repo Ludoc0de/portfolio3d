@@ -3,13 +3,17 @@ import Objects from "./components/Objects"
 import Particles from "./components/Particles"
 import { Canvas, useFrame } from "@react-three/fiber"
 import { ScrollControls, Scroll } from "@react-three/drei"
-import { useState } from "react"
+import { useState, useEffect, Suspense } from "react"
 import * as THREE from 'three'
 
 function ScrollAnimation(){
     //get particle object.length
     const [childData, setChildData] = useState()
     console.log(childData)
+
+    useEffect(()=>{
+        childData && console.log('ok')
+    }, [childData])
     
     useFrame(({mouse, camera}) => {
         camera.position.x = THREE.MathUtils.lerp(camera.position.x, mouse.x * 0.5, 0.03)
@@ -22,7 +26,7 @@ function ScrollAnimation(){
         <ScrollControls pages={3}>
             <Scroll>
                 <Objects data={childData => setChildData(childData)} />
-                <Particles/>
+                <Particles test={childData}/>
             </Scroll>
             <Scroll html>
                 <Main />
@@ -36,7 +40,9 @@ export default function App(){
     return (
         <>
             <Canvas>
-                <ScrollAnimation />
+                <Suspense>
+                    <ScrollAnimation />
+                </Suspense>
             </Canvas>
         </>
     )

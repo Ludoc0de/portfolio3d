@@ -1,24 +1,32 @@
+import { useState, useEffect, Suspense } from "react"
 import { Sparkles, Stars, Shadow, ContactShadows, Points, Point, PointMaterial, pointsMaterial } from '@react-three/drei'
 import { useThree } from '@react-three/fiber'
 import { SphereGeometry, bufferAttribute, bufferGeometry } from 'three'
 import * as THREE from 'three'
 
-export default function Particles(){
+export default function Particles({test}){
+    //
+    const [demo, setDemo]=useState()
+    console.log(test)
+    // useEffect(()=>{
+    //     if(test > 0){
+    //         setDemo(test)
+    //     }
+    // }, [test])
+    // console.log(demo)
+    
     const particlesCount = 1000
-
     const positions = new Float32Array(particlesCount * 3)
-    console.log(positions)
-
     const { width, height } = useThree((state) => state.viewport)
   
     for(let i = 0; i < particlesCount; i++){
         positions[i*3+0] = (Math.random() - 0.5)* width
-        positions[i*3+1] = 0.5 * height - Math.random()  * height * 3
-        //3 = number of mesh
+        //data = number of mesh from object
+        positions[i*3+1] = 0.5 * height - Math.random()  * height * test
+        console.log(test)
         positions[i*3+2] = (Math.random() - 0.5)* width
 
     }
-    console.log(positions)
     // const { width, height } = useThree((state) => state.viewport)
     // console.log( 
     //     width,
