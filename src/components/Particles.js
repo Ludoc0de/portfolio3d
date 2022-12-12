@@ -2,10 +2,9 @@ import { useRef } from "react"
 import { Sparkles, Stars, Points, Point } from '@react-three/drei'
 import { useThree, useFrame } from '@react-three/fiber'
 
-export default function Particles({data}){
+export default function Particles(){
     //replace 3 / data not working !
     //data = number of mesh from object
-    console.log(data)
 
     const particlesCount = 1000
     const positions = new Float32Array(particlesCount * 3)

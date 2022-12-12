@@ -7,7 +7,7 @@ import * as THREE from 'three'
 // import { NearestFilter } from 'three'
 import { useFrame } from '@react-three/fiber'
 
-export default function Objects({data}){
+export default function Objects(){
     
     const directionalLight = useRef()
     const propsTexture = useTexture({ 
@@ -22,7 +22,6 @@ export default function Objects({data}){
     const objectsRef = [torusRef, coneRef, toruskRef]
     //save in data objectLength
     const [objectLength, setObjectLength] = useState(objectsRef.length)
-    data(objectLength)
 
     useFrame((state, delta) =>{
         for(const object of objectsRef){
