@@ -1,8 +1,6 @@
-import { useState, useEffect, Suspense } from "react"
-import { Sparkles, Stars, Shadow, ContactShadows, Points, Point, PointMaterial, pointsMaterial } from '@react-three/drei'
-import { useThree } from '@react-three/fiber'
-import { SphereGeometry, bufferAttribute, bufferGeometry } from 'three'
-import * as THREE from 'three'
+import { useRef } from "react"
+import { Sparkles, Stars, Points, Point } from '@react-three/drei'
+import { useThree, useFrame } from '@react-three/fiber'
 
 export default function Particles({data}){
     //replace 3 / data not working !
@@ -12,8 +10,7 @@ export default function Particles({data}){
     const particlesCount = 1000
     const positions = new Float32Array(particlesCount * 3)
     const pointArray= [...Array(particlesCount)]
-
-  
+    //get screen viewport dimension
     const { width, height } = useThree((state) => state.viewport)
     const particlesColor = ['beige', 'pink', 'orange', 'yellow', 'red']
 
@@ -27,11 +24,16 @@ export default function Particles({data}){
 
     // }
 
+    const test = useRef()
+    useFrame((state, delta) =>{
+        test.current.rotation.y += delta*0.001
+    })
+
     return(
         // <Stars  radius={10} depth={50} count={2000} factor={5} saturation={0} fade speed={2} /> 
         //<Sparkles color={'yellow'} count={1000} scale={1} size={1} speed={0.4} />
 
-        <Points limit={particlesCount}>
+        <Points limit={particlesCount} ref={test}>
             <pointsMaterial size={0.02} vertexColors />
             {pointArray.map((value, index) => (
                 <Point
