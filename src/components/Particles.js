@@ -33,23 +33,20 @@ export default function Particles({data}){
         // <Stars  radius={10} depth={50} count={2000} factor={5} saturation={0} fade speed={2} /> 
         //<Sparkles color={'yellow'} count={1000} scale={1} size={1} speed={0.4} />
         
-        <points>
-             <pointsMaterial 
-                size={0.02} 
-                sizeAttenuation={true} 
-                // color='red'
-                color={colors}
-             
-             />
-             <bufferGeometry>
-                 <bufferAttribute 
-                    attach="attributes-position"
-                    count={particlesCount}
-                    itemSize={3}
-                    array={positions}
+        <Points limit={size}>
+            <pointsMaterial size={0.05} vertexColors />
+            {Array.from({ length: size }).map((_, i) => (
+                <Point
+                key={i}
+                position={[
+                    // (0.5 - Math.random()) * width * 2,
+                    // 0.5 * height + Math.random() ** 0.25 * height * -3,
+                    // (0.5 - Math.random()) * 25,
+                ]}
+                // color={particleColors[Math.floor(Math.random() * (particleColors.length - 1))]}
                 />
-            </bufferGeometry>
-        </points>
+            ))}
+        </Points>
 
 
         //work one
