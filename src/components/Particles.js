@@ -26,7 +26,7 @@ export default function Particles({data}){
 
     const test = useRef()
     useFrame((state, delta) =>{
-        test.current.rotation.y += delta*0.001
+        test.current.rotation.y += delta*0.002
     })
 
     return(
