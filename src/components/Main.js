@@ -1,7 +1,6 @@
-import { Html, Scroll } from "@react-three/drei"
 
-export default function Main(){
-     return (
+export default function Main(){ 
+    return (
         <div className="main">
             <section 
                 style={{
@@ -42,5 +41,5 @@ export default function Main(){
                 <h1>Contact me</h1>
             </section>
         </div>
-     )
+    )
 }
