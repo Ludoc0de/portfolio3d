@@ -15,7 +15,6 @@ export default function ScrollAnimation(props){
 
     window.addEventListener('scroll', (e)=>{
         demo=window.scrollY
-    
         console.log(demo)
     })
 
