@@ -10,23 +10,8 @@ export default function ScrollAnimation(props){
     //get particle object.length
     //const [childData, setChildData] = useState()
 
-    let demo = window.scrollY
-    // console.log(scrollY)
-
-    window.addEventListener('scroll', (e)=>{
-        demo=window.scrollY
-        console.log(demo)
-    })
-
-    // let currentSection = 0
-
-    // console.log('test')
     // window.addEventListener('scroll', () => {
-    //     scrollY = window.scrollY
-    //     console.log(scrollY)
-        
-    //     const newSection = scrollY / sizes.height
-    //     console.log(newSection)
+    //     console.log('ok')
     // })
 
     useFrame(({mouse, camera}) => {
