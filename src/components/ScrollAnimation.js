@@ -10,9 +10,14 @@ export default function ScrollAnimation(props){
     //get particle object.length
     //const [childData, setChildData] = useState()
 
-    let scrollY = ScrollControls
-    console.log(scrollY)
-    console.log(window)
+    let demo = window.scrollY
+    // console.log(scrollY)
+
+    window.addEventListener('scroll', (e)=>{
+        demo=window.scrollY
+    
+        console.log(demo)
+    })
 
     // let currentSection = 0
 
