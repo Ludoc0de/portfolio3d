@@ -8,7 +8,10 @@ import * as THREE from 'three'
 import { useFrame } from '@react-three/fiber'
 
 export default function Objects(){
-    
+    //scroll set for animation
+    let currentSection = 0
+    const scroll = useScroll()
+
     const directionalLight = useRef()
     const propsTexture = useTexture({ 
         map: texture
@@ -27,6 +30,13 @@ export default function Objects(){
         for(const object of objectsRef){
             object.current.rotation.y += delta*0.1
             object.current.rotation.x += delta*0.15
+        }
+        //animation on the object on scroll
+        const section = Number(scroll.offset.toFixed(1))
+        const newSection = Math.round(section*2)/2
+        if(newSection != currentSection){
+            currentSection = newSection
+            console.log('changed', currentSection)
         }
     })
 
