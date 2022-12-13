@@ -28,10 +28,10 @@ export default function ScrollAnimation(props){
     })
 
 
-    const scroll = useScroll(0)
-    useFrame((state, delta)=>{
-        console.log(scroll.offset)
-    })
+    // const scroll = useScroll(0)
+    // useFrame((state, delta)=>{
+    //     console.log(scroll.offset)
+    // })
 
     return (
         <ScrollControls pages={3} >
