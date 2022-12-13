@@ -6,6 +6,7 @@ import useRefs from 'react-use-refs'
 import * as THREE from 'three'
 // import { NearestFilter } from 'three'
 import { useFrame } from '@react-three/fiber'
+import gsap from 'gsap'
 
 export default function Objects(){
     //scroll set for animation
@@ -23,6 +24,7 @@ export default function Objects(){
     const objectsDistance = 6
     const [torusRef, coneRef, toruskRef] = useRefs()
     const objectsRef = [torusRef, coneRef, toruskRef]
+    
     //save in data objectLength
     const [objectLength, setObjectLength] = useState(objectsRef.length)
 
@@ -31,12 +33,21 @@ export default function Objects(){
             object.current.rotation.y += delta*0.1
             object.current.rotation.x += delta*0.15
         }
+        
         //animation on the object on scroll
         const section = Number(scroll.offset.toFixed(1))
-        const newSection = Math.round(section*2)/2
+        const newSection = Math.round(section*2)
         if(newSection != currentSection){
             currentSection = newSection
-            console.log('changed', currentSection)
+            gsap.to(
+                objectsRef[currentSection].current.rotation,{
+                    duration: 2,
+                    ease: 'power2!.inOut',
+                    x:'+=6',
+                    y:'+=3',
+                    z:'+=1.5'
+                }
+            )
         }
     })
 
