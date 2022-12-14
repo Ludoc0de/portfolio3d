@@ -23,16 +23,16 @@ export default function Particles(){
 
     // }
 
-    const test = useRef()
+    const particles = useRef()
     useFrame((state, delta) =>{
-        test.current.rotation.y += delta*0.002
+        particles.current.rotation.y += delta*0.002
     })
 
     return(
         // <Stars  radius={10} depth={50} count={2000} factor={5} saturation={0} fade speed={2} /> 
         //<Sparkles color={'yellow'} count={1000} scale={1} size={1} speed={0.4} />
 
-        <Points limit={particlesCount} ref={test}>
+        <Points limit={particlesCount} ref={particles}>
             <pointsMaterial size={0.02} vertexColors />
             {pointArray.map((value, index) => (
                 <Point
