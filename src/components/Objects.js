@@ -42,7 +42,7 @@ export default function Objects(){
             gsap.to(
                 objectsRef[currentSection].current.rotation,{
                     duration: 2,
-                    ease: 'power2!.inOut',
+                    ease: 'power2.inOut',
                     x:'+=6',
                     y:'+=3',
                     z:'+=1.5'
