@@ -15,10 +15,11 @@ export default function Main() {
         <p>test gG</p>
       </section>
       <section
+        className="coneRef"
         style={{
           position: "absolute",
           top: "140vh",
-          // left: '50vw',
+          // left: "50vw",
           transform: "translateX(100%)",
           // color: '#f4b677',
           margin: 0,
