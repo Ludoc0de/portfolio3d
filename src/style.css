@@ -1,36 +1,35 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 html,
 body,
 #root {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    color: beige;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  color: beige;
 }
 
 Canvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    outline: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  outline: none;
 }
 
 .main {
-    /* position:absolute;
+  /* position:absolute;
     top:0;
     width: 100%; */
-    font-family: 'Cabin', sans-serif;
-    /* font-size: 7vmin; */
-    font-size: 7vmin;
-    line-height: 0.75;
-    width: 15em;
-    text-transform: uppercase;
+  font-family: "NegativeSpace", "Cabin", sans-serif, Space;
+  font-size: 7vmin;
+  line-height: 0.75;
+  width: 15em;
+  text-transform: uppercase;
 }
 
 /* .section {
@@ -47,5 +46,13 @@ Canvas {
 } */
 
 section:nth-child(even) {
-    justify-content: flex-end;
+  justify-content: flex-end;
+}
+
+/* PHONE */
+
+@media screen and (max-width: 650px) {
+  .coneRef {
+    left: -30vw;
+  }
 }
