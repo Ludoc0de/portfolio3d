@@ -7,18 +7,27 @@ import * as THREE from "three";
 // import { NearestFilter } from 'three'
 import { useFrame } from "@react-three/fiber";
 import gsap from "gsap";
-import { Group } from "three";
 
 export default function Objects() {
   //
   const viewport = useThree((state) => state.viewport);
+
   const {
     size: { width, height },
   } = useThree();
-  const ratio = width / height;
+  let ratio = width / height;
   console.log("ratio:" + ratio);
-  console.log("ratio ~:" + ratio.toFixed(1));
+  console.log("ratio round:" + Math.round(ratio));
+  console.log("ratio ceil:" + Math.ceil(ratio));
+  console.log("ratio fixed:" + ratio.toFixed(1));
   const scale = Math.min(1, ratio);
+
+  let conePosition = -2;
+  ratio < 1 ? (conePosition = -0.5) : conePosition;
+
+  // let objectPosition = -2;
+  // ratio < 1 ? (conePosition = -0.5) : conePosition;
+
   //
   //scroll set for animation
   let currentSection = 0;
@@ -71,8 +80,7 @@ export default function Objects() {
       <mesh
         scale={[scale, scale, scale]}
         ref={torusRef}
-        // position-x={0.6}
-        position-x={Math.round(-ratio) + 1}
+        position-x={0}
         rotation-y={Math.PI * 0.25}
         position-y={[-objectsDistance * 0]}
       >
@@ -83,7 +91,7 @@ export default function Objects() {
       <mesh
         scale={[scale, scale, scale]}
         ref={coneRef}
-        position-x={-ratio}
+        position-x={conePosition}
         rotation-y={Math.PI * 0.25}
         position-y={[-objectsDistance * 1.2]}
       >
@@ -94,8 +102,7 @@ export default function Objects() {
       <mesh
         scale={[scale, scale, scale]}
         ref={toruskRef}
-        // position-x={0}
-        position-x={Math.round(-ratio) + 1}
+        position-x={0}
         rotation-y={Math.PI * 0.25}
         position-y={[-objectsDistance * 2.6]}
       >
