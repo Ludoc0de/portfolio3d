@@ -5,9 +5,6 @@ export default function Main() {
         style={{
           position: "absolute",
           top: "45vh",
-          // left: '5vw',
-          // transform: 'translateX(-50%)',
-          // color: 'green',
           marginLeft: "1em",
         }}
       >
@@ -19,9 +16,7 @@ export default function Main() {
         style={{
           position: "absolute",
           top: "140vh",
-          // left: "50vw",
           transform: "translateX(100%)",
-          // color: '#f4b677',
           margin: 0,
           marginLeft: "1em",
         }}
@@ -32,9 +27,6 @@ export default function Main() {
         style={{
           position: "absolute",
           top: "250vh",
-          // left: '50vw',
-          // transform: 'translateX(-50%)',
-          // color: '#673ab7',
           margin: 0,
           marginLeft: "1em",
         }}

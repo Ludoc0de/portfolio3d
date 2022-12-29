@@ -22,28 +22,12 @@ Canvas {
 }
 
 .main {
-  /* position:absolute;
-    top:0;
-    width: 100%; */
   font-family: "NegativeSpace", "Cabin", sans-serif, Space;
   font-size: 7vmin;
   line-height: 0.75;
   width: 15em;
   text-transform: uppercase;
 }
-
-/* .section {
-    display: flex;
-    align-items: center;
-    height: 100vh;
-    width:100%;
-    position: relative;
-    font-family: 'Cabin', sans-serif;
-    text-transform: uppercase;
-    font-size: 7vmin;
-    padding-left: 10%;
-    padding-right: 10%;
-} */
 
 section:nth-child(even) {
   justify-content: flex-end;
