@@ -12,7 +12,7 @@ export default function Main() {
         }}
       >
         <h1>Ludo code !</h1>
-        <p>test gG</p>
+        <p>Software developpeur</p>
       </section>
       <section
         className="coneRef"

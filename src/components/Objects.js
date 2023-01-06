@@ -16,10 +16,6 @@ export default function Objects() {
     size: { width, height },
   } = useThree();
   let ratio = width / height;
-  console.log("ratio:" + ratio);
-  console.log("ratio round:" + Math.round(ratio));
-  console.log("ratio ceil:" + Math.ceil(ratio));
-  console.log("ratio fixed:" + ratio.toFixed(1));
   const scale = Math.min(1, ratio);
 
   let conePosition = -2;
