@@ -4,7 +4,8 @@ export default function Main() {
       <section
         style={{
           position: "absolute",
-          top: "45vh",
+          // top: "45vh",
+          top: "25vh",
           marginLeft: "1em",
         }}
       >
@@ -15,7 +16,8 @@ export default function Main() {
         className="coneRef"
         style={{
           position: "absolute",
-          top: "140vh",
+          // top: "140vh",
+          top: "120vh",
           transform: "translateX(100%)",
           margin: 0,
           marginLeft: "1em",
@@ -26,7 +28,8 @@ export default function Main() {
       <section
         style={{
           position: "absolute",
-          top: "250vh",
+          // top: "250vh",
+          top: "230vh",
           margin: 0,
           marginLeft: "1em",
         }}
