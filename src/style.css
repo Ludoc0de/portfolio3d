@@ -14,6 +14,10 @@ body,
   color: beige;
 }
 
+body {
+  font-family: "Roboto Slab", "Finlandica", sans-serif, serif;
+}
+
 Canvas {
   position: fixed;
   top: 0;
@@ -22,7 +26,6 @@ Canvas {
 }
 
 .main {
-  font-family: "NegativeSpace", "Cabin", sans-serif, Space;
   font-size: 7vmin;
   line-height: 0.75;
   width: 15em;
@@ -31,6 +34,49 @@ Canvas {
 
 section:nth-child(even) {
   justify-content: flex-end;
+}
+
+.presentation {
+  position: absolute;
+  top: 25vh;
+  margin-left: 1em;
+  width: 100%;
+}
+
+.presentation__title,
+.portfolio__title {
+  font-size: 0.7em;
+  margin-top: 0.5em;
+}
+
+.presentation__text {
+  position: absolute;
+  top: 40vh;
+  transform: translateX(100%);
+  width: 10.8em;
+  line-height: 0.6em;
+  letter-spacing: 0.025em;
+  font-size: 0.75em;
+  text-align: justify;
+}
+
+.portfolio {
+  position: absolute;
+  top: 120vh;
+  transform: translateX(100%);
+  margin: 0;
+  margin-left: -7em;
+}
+
+.portfolio__title {
+  text-align: right;
+}
+
+.contact {
+  position: absolute;
+  top: 230vh;
+  margin: 0;
+  margin-left: 1em;
 }
 
 /* PHONE */
