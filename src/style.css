@@ -119,9 +119,34 @@ a:hover {
 
 .contact {
   position: absolute;
-  top: 270vh;
+  top: 320vh;
   margin: 0;
   margin-left: 1em;
+}
+
+.contact__form {
+  display: grid;
+  grid-template-columns: 1fr 10em;
+  row-gap: 0.5em;
+  column-gap: 0.5em;
+  margin-top: 2em;
+  width: 5em;
+  font-size: 0.6em;
+}
+
+input,
+textarea,
+.contact__btn {
+  color: beige;
+  background-color: transparent;
+  border: 1px solid beige;
+  border-radius: 0.5em;
+  height: 2.75em;
+  width: 100%;
+}
+
+.contact__btn {
+  border-radius: 0.5em;
 }
 
 /* PHONE */
