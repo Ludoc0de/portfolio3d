@@ -26,6 +26,10 @@ Canvas {
 }
 
 .main {
+  width: calc(100% - 40px);
+  max-width: 1800px;
+  margin-left: auto;
+  margin-right: auto;
   font-size: 7vmin;
   line-height: 0.75;
   width: 15em;
@@ -43,29 +47,41 @@ section:nth-child(even) {
   width: 100%;
 }
 
+.presentation__text {
+  position: absolute;
+  top: 35vh;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  justify-items: end;
+  align-items: center;
+  text-align: justify;
+  line-height: 0.6em;
+  letter-spacing: 0.025em;
+  font-size: 0.75em;
+}
+
+.presentation__logo {
+  max-width: 100%;
+  /* margin: 0.5em; */
+  /* for picture*/
+  transform: scale(0.4);
+  border-radius: 0.5em;
+}
+
 .presentation__title,
 .portfolio__title {
   font-size: 0.7em;
   margin-top: 0.5em;
 }
 
-.presentation__text {
-  position: absolute;
-  top: 40vh;
-  transform: translateX(100%);
-  width: 10.8em;
-  line-height: 0.6em;
-  letter-spacing: 0.025em;
-  font-size: 0.75em;
-  text-align: justify;
-}
-
 .portfolio {
   position: absolute;
   top: 120vh;
-  transform: translateX(100%);
+  /* transform: translateX(100%); */
+  text-align: right;
   margin: 0;
-  margin-left: -7em;
+  margin-left: -0em;
+  width: 100%;
 }
 
 .portfolio__title {
