@@ -100,7 +100,7 @@ export default function Objects() {
         ref={toruskRef}
         position-x={0}
         rotation-y={Math.PI * 0.25}
-        position-y={[-objectsDistance * 2.85]}
+        position-y={[-objectsDistance * 3.6]}
       >
         <torusKnotGeometry args={[0.8, 0.35, 100, 16]} />
         <meshToonMaterial gradientMap={gradientTexture} />
