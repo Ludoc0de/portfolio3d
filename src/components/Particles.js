@@ -28,7 +28,7 @@ export default function Particles() {
           key={index}
           position={[
             (Math.random() - 0.5) * width,
-            0.5 * height - Math.random() * height * 3,
+            0.5 * height - Math.random() * height * 4,
             (Math.random() - 0.5) * width,
           ]}
           color={
