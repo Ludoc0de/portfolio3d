@@ -39,8 +39,4 @@ section:nth-child(even) {
   .coneRef {
     left: -30vw;
   }
-  .main {
-    position: absolute;
-    /* top: -10vh; */
-  }
 }
