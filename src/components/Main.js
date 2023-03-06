@@ -1,6 +1,12 @@
 import heroImage from "../images/template.png";
 import Projects from "./Projects";
 import Sky from "../images/skypictures.png";
+import Library from "../images/reader.png";
+import DevOps from "../images/devops.svg";
+import Recipe from "../images/fraise.png";
+import Beauty from "../images/metiss.png";
+import Happy from "../images/sqvt.png";
+
 export default function Main() {
   return (
     <div className="main">
@@ -25,26 +31,43 @@ export default function Main() {
           <Projects
             img={Sky}
             linkText={"cliquer pour visiter"}
-            title={"La haut, dans le ciel !"}
+            title={"Dans le ciel !"}
             text={"Javascript OOP, API, SASS, GitHub"}
           />
           <Projects
-            img={Sky}
+            img={Library}
             linkText={"cliquer pour visiter"}
-            title={"La haut, dans le ciel !"}
-            text={"Javascript OOP, API, SASS, GitHub"}
+            title={"My library"}
+            text={"REACT, SASS, STORAGE, API"}
           />
           <Projects
-            img={Sky}
+            img={DevOps}
             linkText={"cliquer pour visiter"}
-            title={"La haut, dans le ciel !"}
-            text={"Javascript OOP, API, SASS, GitHub"}
+            title={"Portfolio DevOps"}
+            text={"TERRAFORM, AWS S3, GITHUB ACTION, DOCKER(Incomming)"}
           />
           <Projects
-            img={Sky}
+            img={Recipe}
             linkText={"cliquer pour visiter"}
-            title={"La haut, dans le ciel !"}
-            text={"Javascript OOP, API, SASS, GitHub"}
+            title={"Mes recettes"}
+            text={"JS, EJS, NODEJS, EXPRESS, MONGODB, GOOGLE OAUTH, MVC"}
+          />
+        </div>
+
+        <h3 className="client__title">Mes projets clients</h3>
+
+        <div className="project">
+          <Projects
+            img={Beauty}
+            linkText={"cliquer pour visiter"}
+            title={"Beauté"}
+            text={"HTML, CSS, JV"}
+          />
+          <Projects
+            img={Happy}
+            linkText={"cliquer pour visiter"}
+            title={"Happy"}
+            text={"REACT, SASS"}
           />
         </div>
       </section>
