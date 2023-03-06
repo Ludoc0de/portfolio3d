@@ -78,7 +78,7 @@ export default function Objects() {
         ref={torusRef}
         position-x={0}
         rotation-y={Math.PI * 0.25}
-        position-y={[-objectsDistance * -0.25]}
+        position-y={[-objectsDistance * -0.2]}
       >
         <torusGeometry args={[1, 0.4, 16, 60]} />
         <meshToonMaterial gradientMap={gradientTexture} />
@@ -89,7 +89,7 @@ export default function Objects() {
         ref={coneRef}
         position-x={conePosition}
         rotation-y={Math.PI * 0.25}
-        position-y={[-objectsDistance * 0.95]}
+        position-y={[-objectsDistance * 1]}
       >
         <coneGeometry args={[1, 2, 32]} />
         <meshToonMaterial gradientMap={gradientTexture} />
@@ -100,7 +100,7 @@ export default function Objects() {
         ref={toruskRef}
         position-x={0}
         rotation-y={Math.PI * 0.25}
-        position-y={[-objectsDistance * 2.35]}
+        position-y={[-objectsDistance * 2.4]}
       >
         <torusKnotGeometry args={[0.8, 0.35, 100, 16]} />
         <meshToonMaterial gradientMap={gradientTexture} />
