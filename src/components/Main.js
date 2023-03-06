@@ -54,7 +54,7 @@ export default function Main() {
           />
         </div>
 
-        {/* <h3 className="client__title">Mes projets clients</h3>
+        <h3 className="client__title">Mes projets clients</h3>
 
         <div className="project">
           <Projects
@@ -69,11 +69,22 @@ export default function Main() {
             title={"Happy"}
             text={"REACT, SASS"}
           />
-        </div> */}
+        </div>
       </section>
 
       <section className="contact">
-        <h1>Contact me</h1>
+        <h1>Me Contacter</h1>
+        <form className="contact__form" onSubmit="">
+          <label>Name</label>
+          <input type="text" name="user_name" />
+          <label>Email</label>
+          <input type="email" name="user_email" />
+          <label>Message</label>
+          <textarea name="message" />
+          <button className="contact__btn" type="submit">
+            Envoyer
+          </button>
+        </form>
       </section>
     </div>
   );
