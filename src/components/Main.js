@@ -54,7 +54,7 @@ export default function Main() {
           />
         </div>
 
-        <h3 className="client__title">Mes projets clients</h3>
+        {/* <h3 className="client__title">Mes projets clients</h3>
 
         <div className="project">
           <Projects
@@ -69,7 +69,7 @@ export default function Main() {
             title={"Happy"}
             text={"REACT, SASS"}
           />
-        </div>
+        </div> */}
       </section>
 
       <section className="contact">
