@@ -1,5 +1,6 @@
 import heroImage from "../images/template.png";
 import Projects from "./Projects";
+import Footer from "./Footer";
 import Sky from "../images/skypictures.png";
 import Library from "../images/reader.png";
 import DevOps from "../images/devops.svg";
@@ -91,6 +92,7 @@ export default function Main() {
           </button>
         </form>
       </section>
+      <Footer />
     </div>
   );
 }
