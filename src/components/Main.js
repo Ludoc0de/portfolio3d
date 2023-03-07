@@ -87,7 +87,7 @@ export default function Main() {
           <label>Message</label>
           <textarea name="message" />
           <button className="contact__btn" type="submit">
-            Envoyer
+            ENVOYER
           </button>
         </form>
       </section>
