@@ -8,6 +8,11 @@ import Beauty from "../images/metiss.png";
 import Happy from "../images/sqvt.png";
 
 export default function Main() {
+  // const onSubmit = (e) => {
+  //   e.preventDefault();
+  //   console.log("ok");
+  // };
+  //"https://formsubmit.co/el/haxume"
   return (
     <div className="main">
       <section className="presentation">
@@ -76,13 +81,13 @@ export default function Main() {
         <h1>Me Contacter</h1>
         <form
           className="contact__form"
-          action="https://formsubmit.co/95877e1dbad3f8ca9042d0f88b0352f3"
+          action="https://formsubmit.co/f4c0b661879d47be04a3bb62e4bbe4ac"
           method="POST"
         >
           <label>Name</label>
-          <input type="text" name="user_name" />
+          <input type="text" name="name" />
           <label>Email</label>
-          <input type="email" name="user_email" />
+          <input type="email" name="email" />
           <label>Message</label>
           <textarea name="message" />
           <button className="contact__btn" type="submit">
