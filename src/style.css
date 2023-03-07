@@ -126,7 +126,7 @@ a:hover {
 
 .contact__form {
   display: grid;
-  grid-template-columns: 1fr 10em;
+  grid-template-columns: 1fr;
   row-gap: 0.5em;
   column-gap: 0.5em;
   margin-top: 2em;
@@ -142,11 +142,12 @@ textarea,
   border: 1px solid beige;
   border-radius: 0.5em;
   height: 2.75em;
-  width: 100%;
+  width: 40em;
 }
 
-.contact__btn {
-  border-radius: 0.5em;
+.contact__btn:hover {
+  background-color: beige;
+  color: black;
 }
 
 /* PHONE */
