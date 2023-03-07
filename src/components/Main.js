@@ -74,7 +74,11 @@ export default function Main() {
 
       <section className="contact">
         <h1>Me Contacter</h1>
-        <form className="contact__form" onSubmit="">
+        <form
+          className="contact__form"
+          action="https://formsubmit.co/95877e1dbad3f8ca9042d0f88b0352f3"
+          method="POST"
+        >
           <label>Name</label>
           <input type="text" name="user_name" />
           <label>Email</label>
