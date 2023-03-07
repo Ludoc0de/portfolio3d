@@ -8,10 +8,6 @@ import Beauty from "../images/metiss.png";
 import Happy from "../images/sqvt.png";
 
 export default function Main() {
-  // const onSubmit = (e) => {
-  //   e.preventDefault();
-  //   console.log("ok");
-  // };
   //"https://formsubmit.co/el/haxume"
   return (
     <div className="main">
