@@ -52,7 +52,8 @@ a:hover {
 }
 
 .presentation,
-.portfolio {
+.portfolio,
+footer {
   position: absolute;
   top: 25vh;
   margin-left: 1em;
@@ -170,6 +171,16 @@ textarea:focus {
   background-color: beige;
   color: black;
   transition: ease 0.5s;
+}
+
+footer {
+  top: 397vh;
+  font-size: 0.2em;
+  list-style-type: none;
+}
+
+li {
+  list-style-type: none;
 }
 
 /* PHONE */
