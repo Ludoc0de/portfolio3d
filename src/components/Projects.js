@@ -1,12 +1,8 @@
 export default function Projects(props) {
-  const { img, linkText, title, text } = props;
+  const { img, link, linkText, title, text } = props;
   return (
     <div className="project__container">
-      <a
-        className="project__link"
-        target="_blank"
-        href="https://skypictures.netlify.app/"
-      >
+      <a className="project__link" target="_blank" href={link}>
         <span>
           <img className="project__img" src={img} alt="photo de l'espace" />
           <div className="project__text">{linkText}</div>
