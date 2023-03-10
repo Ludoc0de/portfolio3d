@@ -1,10 +1,10 @@
 import heroImage from "../images/template.png";
 import Projects from "./Projects";
 import Footer from "./Footer";
-import Sky from "../images/skypictures.png";
-import Library from "../images/reader.png";
-import DevOps from "../images/devops.svg";
-import Recipe from "../images/fraise.png";
+import Sky from "../images/space.png";
+import Library from "../images/read.png";
+import DevOps from "../images/dev.png";
+import Service from "../images/services.png";
 import Beauty from "../images/metiss.png";
 import Happy from "../images/sqvt.png";
 
@@ -32,27 +32,31 @@ export default function Main() {
         <div className="project">
           <Projects
             img={Sky}
+            link={"https://skypictures.netlify.app/"}
             linkText={"cliquer pour visiter"}
             title={"Dans le ciel !"}
             text={"Javascript OOP, API, SASS, GitHub"}
           />
           <Projects
             img={Library}
+            link={"https://urlibrary.netlify.app/"}
             linkText={"cliquer pour visiter"}
             title={"My library"}
             text={"REACT, SASS, STORAGE, API"}
           />
           <Projects
             img={DevOps}
+            link={"https://ludo-code.com/"}
             linkText={"cliquer pour visiter"}
             title={"Portfolio DevOps"}
             text={"TERRAFORM, AWS S3, GITHUB ACTION, DOCKER(Incomming)"}
           />
           <Projects
-            img={Recipe}
+            img={Service}
+            link={"https://aod.cyclic.app/"}
             linkText={"cliquer pour visiter"}
-            title={"Mes recettes"}
-            text={"JS, EJS, NODEJS, EXPRESS, MONGODB, GOOGLE OAUTH, MVC"}
+            title={"Mes services"}
+            text={"MONGODB, EXPRESS, REACTJS, NODEJS, GOOGLE AUTH, CRUD"}
           />
         </div>
 
