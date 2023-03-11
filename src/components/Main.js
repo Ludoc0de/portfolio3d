@@ -100,7 +100,8 @@ export default function Main() {
             name="_next"
             value="http://localhost:3000/pages/thankyou.html"
           ></input>
-          <button className="contact__btn" type="submit">
+          {/* <button className="contact__btn" type="submit"> */}
+          <button className="btn btn-warning" type="submit">
             ENVOYER
           </button>
         </form>

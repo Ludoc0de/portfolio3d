@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   margin: 0;
   padding: 0;
@@ -36,7 +40,7 @@ Canvas {
   text-transform: uppercase;
 }
 
-section:nth-child(even) {
+/* section:nth-child(even) {
   justify-content: flex-end;
 }
 
@@ -76,7 +80,6 @@ footer {
 
 .presentation__logo {
   max-width: 100%;
-  /* for picture*/
   transform: scale(0.4);
   border-radius: 0.5em;
 }
@@ -182,11 +185,12 @@ footer {
 li {
   list-style-type: none;
 }
+*/
 
 /* PHONE */
 
-@media screen and (max-width: 650px) {
+/* @media screen and (max-width: 650px) {
   .coneRef {
     left: -30vw;
   }
-}
+} */
