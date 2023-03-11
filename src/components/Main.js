@@ -11,13 +11,18 @@ import Happy from "../images/sqvt.png";
 export default function Main() {
   //"https://formsubmit.co/el/haxume"
   return (
-    <div className="main">
+    <div className="main pl-8">
       <section className="presentation">
-        <h3>Ludo code !</h3>
-        <h1 className="presentation__title">Votre developpeur logiciels</h1>
-        <div className="presentation__text">
-          <img className="presentation__logo" src={heroImage} />
-          <p>
+        <h3 className="text-8xl">Ludo code !</h3>
+        <h1 className="presentation__title text-6xl">
+          Votre developpeur logiciels
+        </h1>
+        <div className="presentation__text mt-40 grid grid-cols-2 items-center">
+          <img
+            className="presentation__logo scale-50 rounded-lg"
+            src={heroImage}
+          />
+          <p className="pr-10 text-2xl text-justify">
             Ludo, développeur web passionné, curieux et dynamique. Expérience en
             HTML, CSS et JavaScript. Motivé par le challenge de créer vos
             demandes colorés et personnalisés. Portfolio en ligne disponible.
@@ -25,11 +30,11 @@ export default function Main() {
         </div>
       </section>
 
-      <section className="portfolio">
-        <h1>Mon Portfolio</h1>
-        <h3 className="portfolio__title">Mes derniers projets</h3>
+      <section className="portfolio text-right">
+        <h1 className="text-8xl">Mon Portfolio</h1>
+        <h3 className="portfolio__title text-6xl">Mes derniers projets</h3>
 
-        <div className="project">
+        <div className="project grid grid-cols-2 gap-12 my-16">
           <Projects
             img={Sky}
             link={"https://skypictures.netlify.app/"}
@@ -62,7 +67,7 @@ export default function Main() {
           />
         </div>
 
-        <h3 className="client__title">Mes projets clients</h3>
+        {/* <h3 className="client__title">Mes projets clients</h3>
 
         <div className="project">
           <Projects
@@ -79,9 +84,9 @@ export default function Main() {
             title={"Happy"}
             text={"REACT, SASS"}
           />
-        </div>
+        </div> */}
       </section>
-
+      {/* 
       <section className="contact">
         <h1>Me Contacter</h1>
         <form
@@ -99,14 +104,14 @@ export default function Main() {
             type="hidden"
             name="_next"
             value="http://localhost:3000/pages/thankyou.html"
-          ></input>
-          {/* <button className="contact__btn" type="submit"> */}
-          <button className="btn btn-warning" type="submit">
+          ></input>*/}
+      {/* <button className="contact__btn" type="submit"> */}
+      {/* <button className="btn btn-warning" type="submit">
             ENVOYER
           </button>
         </form>
       </section>
-      <Footer />
+      <Footer /> */}
     </div>
   );
 }
