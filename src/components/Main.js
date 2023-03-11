@@ -56,7 +56,9 @@ export default function Main() {
             link={"https://aod.cyclic.app/"}
             linkText={"cliquer pour visiter"}
             title={"Mes services"}
-            text={"MONGODB, EXPRESS, REACTJS, NODEJS, GOOGLE AUTH, CRUD"}
+            text={
+              "MONGODB, EXPRESS, REACTJS, NODEJS, TAILWIND, GOOGLE AUTH, CRUD"
+            }
           />
         </div>
 
@@ -66,12 +68,14 @@ export default function Main() {
           <Projects
             img={Beauty}
             linkText={"cliquer pour visiter"}
+            link={"https://metiissnail.netlify.app/"}
             title={"Beauté"}
             text={"HTML, CSS, JV"}
           />
           <Projects
             img={Happy}
             linkText={"cliquer pour visiter"}
+            link={"https://mllehappiness.netlify.app/"}
             title={"Happy"}
             text={"REACT, SASS"}
           />
@@ -91,6 +95,11 @@ export default function Main() {
           <input type="email" name="email" />
           <label>Message</label>
           <textarea name="message" />
+          <input
+            type="hidden"
+            name="_next"
+            value="http://localhost:3000/pages/thankyou.html"
+          ></input>
           <button className="contact__btn" type="submit">
             ENVOYER
           </button>
