@@ -37,7 +37,6 @@ Canvas {
   font-size: 7vmin;
   line-height: 0.75;
   width: 15em;
-  text-transform: uppercase;
 }
 
 /* section:nth-child(even) {
