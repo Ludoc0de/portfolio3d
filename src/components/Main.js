@@ -67,9 +67,9 @@ export default function Main() {
           />
         </div>
 
-        {/* <h3 className="client__title">Mes projets clients</h3>
+        <h3 className="client__title">Mes projets clients</h3>
 
-        <div className="project">
+        <div className="project grid grid-cols-2 my-16">
           <Projects
             img={Beauty}
             linkText={"cliquer pour visiter"}
@@ -84,7 +84,7 @@ export default function Main() {
             title={"Happy"}
             text={"REACT, SASS"}
           />
-        </div> */}
+        </div>
       </section>
       {/* 
       <section className="contact">
