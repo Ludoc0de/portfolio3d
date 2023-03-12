@@ -42,6 +42,7 @@ Canvas {
 
 .presentation,
 .portfolio,
+.contact,
 footer {
   position: absolute;
   top: 25vh;
@@ -50,6 +51,14 @@ footer {
 
 .portfolio {
   top: 120vh;
+}
+
+.contact {
+  top: 320vh;
+}
+
+footer {
+  top: 397vh;
 }
 
 /* section:nth-child(even) {

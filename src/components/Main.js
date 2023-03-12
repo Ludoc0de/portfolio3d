@@ -34,7 +34,7 @@ export default function Main() {
         <h1 className="text-8xl">Mon Portfolio</h1>
         <h3 className="portfolio__title text-6xl">Mes derniers projets</h3>
 
-        <div className="project grid grid-cols-2 gap-12 my-16">
+        <div className="project grid grid-cols-2 gap-12 my-40">
           <Projects
             img={Sky}
             link={"https://skypictures.netlify.app/"}
@@ -69,7 +69,7 @@ export default function Main() {
 
         <h3 className="client__title">Mes projets clients</h3>
 
-        <div className="project grid grid-cols-2 my-16">
+        <div className="project grid grid-cols-2 my-40">
           <Projects
             img={Beauty}
             linkText={"cliquer pour visiter"}
@@ -86,32 +86,46 @@ export default function Main() {
           />
         </div>
       </section>
-      {/* 
+
       <section className="contact">
-        <h1>Me Contacter</h1>
+        <h1 className="text-8xl">Me Contacter</h1>
         <form
-          className="contact__form"
+          className="contact__form mt-16 grid grid-cols-1 text-2xl gap-2"
           action="https://formsubmit.co/f4c0b661879d47be04a3bb62e4bbe4ac"
           method="POST"
         >
           <label>Name</label>
-          <input type="text" name="name" />
+          <input
+            className="bg-transparent border-b-2 mb-10 w-4/5 ease-linear duration-300 focus:border-amber-400 outline-none focus:w-full focus:border-b-4"
+            type="text"
+            name="name"
+          />
           <label>Email</label>
-          <input type="email" name="email" />
+          <input
+            className="bg-transparent border-b-2 mb-10 w-4/5 ease-linear duration-300 focus:border-amber-400 outline-none focus:w-full focus:border-b-4"
+            type="email"
+            name="email"
+          />
           <label>Message</label>
-          <textarea name="message" />
+          <textarea
+            className="bg-transparent border-b-2 mb-10 w-4/5 ease-linear duration-300 focus:border-amber-400 outline-none focus:w-full focus:border-b-4"
+            name="message"
+          />
           <input
             type="hidden"
             name="_next"
             value="http://localhost:3000/pages/thankyou.html"
-          ></input>*/}
-      {/* <button className="contact__btn" type="submit"> */}
-      {/* <button className="btn btn-warning" type="submit">
+          />
+          {/* <button className="contact__btn" type="submit"> */}
+          <button
+            className="btn text-amber-50 mb-10 w-4/5 ease-linear duration-300 hover:border-amber-400 hover:text-amber-400 hover:border-2"
+            type="submit"
+          >
             ENVOYER
           </button>
         </form>
       </section>
-      <Footer /> */}
+      <Footer />
     </div>
   );
 }
