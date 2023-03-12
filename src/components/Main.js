@@ -30,7 +30,7 @@ export default function Main() {
         </div>
       </section>
 
-      <section className="portfolio text-right">
+      <section className="portfolio text-right w-full">
         <h1 className="text-8xl">Mon Portfolio</h1>
         <h3 className="portfolio__title text-6xl">Mes derniers projets</h3>
 
