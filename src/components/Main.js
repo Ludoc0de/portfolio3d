@@ -101,15 +101,18 @@ export default function Main() {
             className="bg-transparent border-b-2 mb-4 lg:mb-10 w-2/3 lg:w-4/5 ease-linear duration-300 focus:border-amber-400 outline-none focus:w-4/5 lg:focus:w-full focus:border-b-4"
             type="text"
             name="name"
+            required
           />
           <label>Email</label>
           <input
             className="bg-transparent border-b-2 mb-4 lg:mb-10  w-2/3 lg:w-4/5 ease-linear duration-300 focus:border-amber-400 outline-none  focus:w-4/5 lg:focus:w-full focus:border-b-4"
             type="email"
             name="email"
+            required
           />
           <label>Message</label>
           <textarea
+            required
             className="bg-transparent border-b-2 mb-4 lg:mb-10 w-2/3 lg:w-4/5 ease-linear duration-300 focus:border-amber-400 outline-none  focus:w-4/5 lg:focus:w-full focus:border-b-4"
             name="message"
           />
