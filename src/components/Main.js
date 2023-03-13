@@ -13,16 +13,16 @@ export default function Main() {
   return (
     <div className="main pl-8">
       <section className="presentation">
-        <h3 className="text-8xl">Ludo code !</h3>
-        <h1 className="presentation__title text-6xl">
+        <h3 className="text-6xl lg:text-8xl">Ludo code !</h3>
+        <h1 className="presentation__title text-3xl lg:text-6xl">
           Votre developpeur logiciels
         </h1>
-        <div className="presentation__text mt-40 grid grid-cols-2 items-center">
+        <div className="presentation__text grid grid-cols-1 mt-8 lg:mt-40 lg:grid lg:grid-cols-2 items-center justify-items-center">
           <img
-            className="presentation__logo scale-50 rounded-lg"
+            className="presentation__logo w-32 mb-8 lg:scale-50 rounded-lg"
             src={heroImage}
           />
-          <p className="pr-10 text-2xl text-justify">
+          <p className="pr-10 text-2xl lg:text-justify">
             Ludo, développeur web passionné, curieux et dynamique. Expérience en
             HTML, CSS et JavaScript. Motivé par le challenge de créer vos
             demandes colorés et personnalisés. Portfolio en ligne disponible.
@@ -30,11 +30,13 @@ export default function Main() {
         </div>
       </section>
 
-      <section className="portfolio text-right w-full">
-        <h1 className="text-8xl">Mon Portfolio</h1>
-        <h3 className="portfolio__title text-6xl">Mes derniers projets</h3>
+      <section className="portfolio w-80 lg:text-right lg:w-full">
+        <h1 className="text-6xl lg:text-8xl">Mon Portfolio</h1>
+        <h3 className="portfolio__title text-3xl lg:text-6xl">
+          Mes derniers projets
+        </h3>
 
-        <div className="project grid grid-cols-2 gap-12 my-40">
+        <div className="project grid grid-cols-2 gap-12 my-20 lg:my-40">
           <Projects
             img={Sky}
             link={"https://skypictures.netlify.app/"}
@@ -54,7 +56,7 @@ export default function Main() {
             link={"https://ludo-code.com/"}
             linkText={"cliquer pour visiter"}
             title={"Portfolio DevOps"}
-            text={"TERRAFORM, AWS S3, GITHUB ACTION, DOCKER(Incomming)"}
+            text={"TERRAFORM, AWS S3, GITHUB ACTION, THREE"}
           />
           <Projects
             img={Service}
@@ -69,7 +71,7 @@ export default function Main() {
 
         <h3 className="client__title">Mes projets clients</h3>
 
-        <div className="project grid grid-cols-2 my-40">
+        <div className="project grid grid-cols-2 gap-12 my-20 lg:my-40">
           <Projects
             img={Beauty}
             linkText={"cliquer pour visiter"}
@@ -88,27 +90,27 @@ export default function Main() {
       </section>
 
       <section className="contact">
-        <h1 className="text-8xl">Me Contacter</h1>
+        <h1 className="text-6xl lg:text-8xl">Me Contacter</h1>
         <form
-          className="contact__form mt-16 grid grid-cols-1 text-2xl gap-2"
+          className="contact__form mt-8 lg:mt-16 grid grid-cols-1 text-lg lg:text-2xl gap-2"
           action="https://formsubmit.co/f4c0b661879d47be04a3bb62e4bbe4ac"
           method="POST"
         >
           <label>Name</label>
           <input
-            className="bg-transparent border-b-2 mb-10 w-4/5 ease-linear duration-300 focus:border-amber-400 outline-none focus:w-full focus:border-b-4"
+            className="bg-transparent border-b-2 mb-4 lg:mb-10 w-2/3 lg:w-4/5 ease-linear duration-300 focus:border-amber-400 outline-none focus:w-4/5 lg:focus:w-full focus:border-b-4"
             type="text"
             name="name"
           />
           <label>Email</label>
           <input
-            className="bg-transparent border-b-2 mb-10 w-4/5 ease-linear duration-300 focus:border-amber-400 outline-none focus:w-full focus:border-b-4"
+            className="bg-transparent border-b-2 mb-4 lg:mb-10  w-2/3 lg:w-4/5 ease-linear duration-300 focus:border-amber-400 outline-none  focus:w-4/5 lg:focus:w-full focus:border-b-4"
             type="email"
             name="email"
           />
           <label>Message</label>
           <textarea
-            className="bg-transparent border-b-2 mb-10 w-4/5 ease-linear duration-300 focus:border-amber-400 outline-none focus:w-full focus:border-b-4"
+            className="bg-transparent border-b-2 mb-4 lg:mb-10 w-2/3 lg:w-4/5 ease-linear duration-300 focus:border-amber-400 outline-none  focus:w-4/5 lg:focus:w-full focus:border-b-4"
             name="message"
           />
           <input
@@ -118,7 +120,7 @@ export default function Main() {
           />
           {/* <button className="contact__btn" type="submit"> */}
           <button
-            className="btn text-amber-50 mb-10 w-4/5 ease-linear duration-300 hover:border-amber-400 hover:text-amber-400 hover:border-2"
+            className="btn text-amber-50 mb-10 w-2/3 lg:w-4/5 ease-linear duration-300 hover:border-amber-400 hover:text-amber-400 hover:border-2"
             type="submit"
           >
             ENVOYER

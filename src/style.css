@@ -61,6 +61,17 @@ footer {
   top: 395vh;
 }
 
+/* PHONE */
+
+@media screen and (max-width: 650px) {
+  /* .portfolio {
+    top: 140vh;
+  } */
+  /* .coneRef {
+    left: -30vw;
+  } */
+}
+
 /* section:nth-child(even) {
   justify-content: flex-end;
 } */
