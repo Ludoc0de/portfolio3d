@@ -12,7 +12,7 @@ export default function Projects(props) {
           <div className="project__text text-2xl">{linkText}</div>
         </div>
       </a>
-      <h3 className="project__title text-6xl mt-4">{title}</h3>
+      <h3 className="project__title text-6xl my-4">{title}</h3>
       <p className="project__text text-2xl mb-8">
         <strong>{text}</strong>
         <br />
