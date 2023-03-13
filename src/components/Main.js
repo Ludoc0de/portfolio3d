@@ -17,9 +17,9 @@ export default function Main() {
         <h1 className="presentation__title text-3xl lg:text-6xl">
           Votre developpeur logiciels
         </h1>
-        <div className="presentation__text grid grid-cols-1 mt-8 lg:mt-40 lg:grid lg:grid-cols-2 items-center justify-items-center">
+        <div className="presentation__text grid grid-cols-1 mt-8 lg:mt-60 lg:grid lg:grid-cols-2 items-center justify-items-start lg:justify-items-center">
           <img
-            className="presentation__logo w-32 mb-8 lg:scale-50 rounded-lg"
+            className="presentation__logo w-32 mb-8 lg:w-1/4 rounded-lg"
             src={heroImage}
           />
           <p className="pr-10 text-2xl lg:text-justify">
@@ -118,7 +118,6 @@ export default function Main() {
             name="_next"
             value="http://localhost:3000/pages/thankyou.html"
           />
-          {/* <button className="contact__btn" type="submit"> */}
           <button
             className="btn text-amber-50 mb-10 w-2/3 lg:w-4/5 ease-linear duration-300 hover:border-amber-400 hover:text-amber-400 hover:border-2"
             type="submit"
