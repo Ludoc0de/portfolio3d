@@ -72,6 +72,19 @@ footer {
   } */
 }
 
+@media screen and (min-width: 801px) {
+  .client__title {
+    margin-top: -20vh;
+  }
+  .contact {
+    margin-top: 30vh;
+  }
+  .toruskRef {
+    margin-top: 20vh;
+    position-y: ;
+  }
+}
+
 /* section:nth-child(even) {
   justify-content: flex-end;
 } */
