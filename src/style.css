@@ -72,14 +72,14 @@ footer {
   } */
 }
 
-@media screen and (min-width: 801px) {
+/* @media screen and (min-width: 801px) {
   .client__title {
     margin-top: -20vh;
   }
   .contact {
     margin-top: 30vh;
   }
-}
+} */
 
 /* section:nth-child(even) {
   justify-content: flex-end;
