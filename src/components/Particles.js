@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { Sparkles, Stars, Points, Point } from "@react-three/drei";
+import { Sparkles, Stars, Points, Point, Circle } from "@react-three/drei";
 import { useThree, useFrame } from "@react-three/fiber";
 
 export default function Particles() {
@@ -21,23 +21,45 @@ export default function Particles() {
     // <Stars  radius={10} depth={50} count={2000} factor={5} saturation={0} fade speed={2} />
     //<Sparkles color={'yellow'} count={1000} scale={1} size={1} speed={0.4} />
 
-    <Points limit={particlesCount} ref={particles}>
-      <pointsMaterial size={0.02} vertexColors />
+    //square particles
+    // <Points limit={particlesCount} ref={particles}>
+    //   <pointsMaterial size={0.02} vertexColors />
+    //   {pointArray.map((value, index) => (
+    //     <Point
+    //       key={index}
+    //       position={[
+    //         (Math.random() - 0.5) * width,
+    //         0.5 * height - Math.random() * height * 4,
+    //         (Math.random() - 0.5) * width,
+    //       ]}
+    //       color={
+    //         particlesColor[
+    //           Math.floor(Math.random() * (particlesColor.length - 1))
+    //         ]
+    //       }
+    //     />
+    //   ))}
+    // </Points>
+
+    //circle particles
+    <group ref={particles}>
       {pointArray.map((value, index) => (
-        <Point
+        <Circle
           key={index}
+          args={[0.02, 32]}
           position={[
             (Math.random() - 0.5) * width,
             0.5 * height - Math.random() * height * 4,
             (Math.random() - 0.5) * width,
           ]}
-          color={
-            particlesColor[
-              Math.floor(Math.random() * (particlesColor.length - 1))
-            ]
-          }
-        />
+        >
+          <meshBasicMaterial
+            color={
+              particlesColor[Math.floor(Math.random() * particlesColor.length)]
+            }
+          />
+        </Circle>
       ))}
-    </Points>
+    </group>
   );
 }
