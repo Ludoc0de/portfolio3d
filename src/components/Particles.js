@@ -11,7 +11,7 @@ export default function Particles() {
   const pointArray = [...Array(particlesCount)];
   //get screen viewport dimension
   const { width, height } = useThree((state) => state.viewport);
-  const particlesColor = ["beige", "pink", "orange", "yellow", "red"];
+  const particlesColor = ["beige", "blue", "orange", "yellow", "purple"];
   const particles = useRef();
   useFrame((state, delta) => {
     particles.current.rotation.y += delta * 0.002;
