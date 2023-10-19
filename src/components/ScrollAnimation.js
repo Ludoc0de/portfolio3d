@@ -10,6 +10,9 @@ export default function ScrollAnimation(props) {
   //get particle object.length
   //const [childData, setChildData] = useState()
 
+  //define pages
+  const [pages, setPages] = useState(5);
+
   useFrame(({ mouse, camera }) => {
     camera.position.x = THREE.MathUtils.lerp(
       camera.position.x,
@@ -30,10 +33,10 @@ export default function ScrollAnimation(props) {
   });
 
   return (
-    <ScrollControls pages={4}>
+    <ScrollControls pages={pages}>
       <Scroll>
         <Objects />
-        <Particles />
+        <Particles pages={pages} />
       </Scroll>
       <Scroll html>
         <Main />
