@@ -68,7 +68,29 @@ export default function Main() {
             }
           />
         </div>
+        {/* 
+        <h3 className="client__title">Mes projets clients</h3>
 
+        <div className="project grid grid-cols-2 gap-12 my-20 lg:my-40">
+          <Projects
+            img={Beauty}
+            linkText={"cliquer pour visiter"}
+            link={"https://metiissnail.netlify.app/"}
+            title={"Beauté"}
+            text={"HTML, CSS, JV"}
+          />
+          <Projects
+            img={Happy}
+            linkText={"cliquer pour visiter"}
+            link={"https://mllehappiness.netlify.app/"}
+            title={"Happy"}
+            text={"REACT, SASS"}
+          />
+        </div> */}
+      </section>
+
+      {/*  */}
+      <section className="clients w-80 lg:text-right lg:w-full">
         <h3 className="client__title">Mes projets clients</h3>
 
         <div className="project grid grid-cols-2 gap-12 my-20 lg:my-40">
@@ -88,6 +110,7 @@ export default function Main() {
           />
         </div>
       </section>
+      {/*  */}
 
       <section className="contact">
         <h1 className="text-6xl lg:text-8xl">Me Contacter</h1>
