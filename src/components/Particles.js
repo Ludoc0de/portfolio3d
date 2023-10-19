@@ -2,7 +2,7 @@ import { useRef } from "react";
 import { Sparkles, Stars, Points, Point, Circle } from "@react-three/drei";
 import { useThree, useFrame } from "@react-three/fiber";
 
-export default function Particles() {
+export default function Particles({ pages }) {
   //replace 3 / data not working !
   //data = number of mesh from object
 
@@ -35,7 +35,7 @@ export default function Particles() {
     //       key={index}
     //       position={[
     //         (Math.random() - 0.5) * width,
-    //         0.5 * height - Math.random() * height * 4,
+    //         0.5 * height - Math.random() * height * pages,
     //         (Math.random() - 0.5) * width,
     //       ]}
     //       color={
@@ -55,7 +55,7 @@ export default function Particles() {
           args={[0.02, 32]}
           position={[
             (Math.random() - 0.5) * width,
-            0.5 * height - Math.random() * height * 4,
+            0.5 * height - Math.random() * height * pages,
             (Math.random() - 0.5) * width,
           ]}
         >
