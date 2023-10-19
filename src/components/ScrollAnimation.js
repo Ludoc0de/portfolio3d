@@ -6,7 +6,7 @@ import { ScrollControls, Scroll, useScroll } from "@react-three/drei";
 import { useRef, useState } from "react";
 import * as THREE from "three";
 
-export default function ScrollAnimation(props) {
+export default function ScrollAnimation() {
   //get particle object.length
   //const [childData, setChildData] = useState()
 
